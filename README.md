@@ -11,4 +11,4 @@
 
 ## Alunos: 
 
-Lucas Tomasi1, Murilo Fantozzi2, Rodrigo Junior Gonçalves3
+Lucas Tomasi, Murilo Fantozzi, Rodrigo Junior Gonçalves
