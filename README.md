@@ -1,7 +1,7 @@
 # Sistemas Inteligentes Aplicado
-# Projeto: 
+## Projeto: 
 
-# Proposta de uso da inteligência artificial no combate a COVID-19
+## Proposta de uso da inteligência artificial no combate a COVID-19
 
 ### Features
 
@@ -9,6 +9,6 @@
 - [x] Artigo Inicial
 - [ ] Implementações
 
-# Alunos: 
+## Alunos: 
 
 Lucas Tomasi1, Murilo Fantozzi2, Rodrigo Junior Gonçalves3
