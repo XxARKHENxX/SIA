@@ -1,0 +1,89 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+Experimente a nova plataforma cruzada PowerShell httpsaka.mspscore6
+
+PS CUsersUserDesktopFaculdadeSISIA & CUsersUserAppDataLocalProgramsPythonPython310python.exe cUsersUserDesktopFaculdadeSISIAAlgoritmotrain_mask_detector.py
+2022-06-25 123054.557853 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cudart64_110.dll'; dlerror cudart64_110.dll not found
+2022-06-25 123054.558238 I tensorflowstream_executorcudacudart_stub.cc29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+[INFO] loading images...
+Traceback (most recent call last)
+  File cUsersUserDesktopFaculdadeSISIAAlgoritmotrain_mask_detector.py, line 42, in module
+    for img in os.listdir(path)
+FileNotFoundError [WinError 3] O sistema não pode encontrar o caminho especificado 'CMask DetectionCODEFace-Mask-Detection-masterdatasetwith_mask'
+PS CUsersUserDesktopFaculdadeSISIA & CUsersUserAppDataLocalProgramsPythonPython310python.exe cUsersUserDesktopFaculdadeSISIAAlgoritmotrain_mask_detector.py
+2022-06-25 123242.208502 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cudart64_110.dll'; dlerror cudart64_110.dll not found
+2022-06-25 123242.208708 I tensorflowstream_executorcudacudart_stub.cc29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+[INFO] loading images...
+CUsersUserAppDataLocalProgramsPythonPython310libsite-packagesPILImage.py992 UserWarning Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+WARNINGtensorflow`input_shape` is undefined or non-square, or `rows` is not in [96, 128, 160, 192, 224]. Weights for input shape (224, 224) will be loaded as the default.
+2022-06-25 123313.060639 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cudart64_110.dll'; dlerror cudart64_110.dll not found
+2022-06-25 123313.062627 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cublas64_11.dll'; dlerror cublas64_11.dll not found
+2022-06-25 123313.063935 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cublasLt64_11.dll'; dlerror cublasLt64_11.dll not found
+2022-06-25 123313.065027 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cufft64_10.dll'; dlerror cufft64_10.dll not found
+2022-06-25 123313.066260 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'curand64_10.dll'; dlerror curand64_10.dll not found
+2022-06-25 123313.067419 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cusolver64_11.dll'; dlerror cusolver64_11.dll not found
+2022-06-25 123313.068642 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cusparse64_11.dll'; dlerror cusparse64_11.dll not found
+2022-06-25 123313.069704 W tensorflowstream_executorplatformdefaultdso_loader.cc64] Could not load dynamic library 'cudnn64_8.dll'; dlerror cudnn64_8.dll not found
+2022-06-25 123313.069869 W tensorflowcorecommon_runtimegpugpu_device.cc1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at httpswww.tensorflow.orginstallgpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2022-06-25 123313.073657 I tensorflowcoreplatformcpu_feature_guard.cc193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Downloading data from httpsstorage.googleapis.comtensorflowkeras-applicationsmobilenet_v2mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224_no_top.h5
+94064649406464 [==============================] - 0s 0usstep
+[INFO] compiling model...
+CUsersUserAppDataLocalProgramsPythonPython310libsite-packageskerasoptimizersoptimizer_v2adam.py110 UserWarning The `lr` argument is deprecated, use `learning_rate` instead.
+  super(Adam, self).__init__(name, kwargs)
+[INFO] training head...
+Epoch 120
+9595 [==============================] - 97s 991msstep - loss 0.4413 - accuracy 0.8375 - val_loss 0.1701 - val_accuracy 0.9804
+Epoch 220
+9595 [==============================] - 95s 1sstep - loss 0.1550 - accuracy 0.9680 - val_loss 0.0837 - val_accuracy 0.9909
+Epoch 320
+9595 [==============================] - 94s 993msstep - loss 0.1049 - accuracy 0.9740 - val_loss 0.0609 - val_accuracy 0.9909
+Epoch 420
+9595 [==============================] - 95s 995msstep - loss 0.0807 - accuracy 0.9759 - val_loss 0.0515 - val_accuracy 0.9896
+Epoch 520
+9595 [==============================] - 96s 1sstep - loss 0.0767 - accuracy 0.9773 - val_loss 0.0421 - val_accuracy 0.9922
+Epoch 620
+9595 [==============================] - 97s 1sstep - loss 0.0575 - accuracy 0.9858 - val_loss 0.0364 - val_accuracy 0.9922
+Epoch 720
+9595 [==============================] - 99s 1sstep - loss 0.0513 - accuracy 0.9862 - val_loss 0.0355 - val_accuracy 0.9909
+Epoch 820
+9595 [==============================] - 99s 1sstep - loss 0.0498 - accuracy 0.9865 - val_loss 0.0344 - val_accuracy 0.9922
+Epoch 920
+9595 [==============================] - 98s 1sstep - loss 0.0472 - accuracy 0.9881 - val_loss 0.0302 - val_accuracy 0.9935
+Epoch 1020
+9595 [==============================] - 98s 1sstep - loss 0.0407 - accuracy 0.9858 - val_loss 0.0288 - val_accuracy 0.9922
+Epoch 1120
+9595 [==============================] - 98s 1sstep - loss 0.0416 - accuracy 0.9888 - val_loss 0.0296 - val_accuracy 0.9935
+Epoch 1220
+9595 [==============================] - 93s 973msstep - loss 0.0393 - accuracy 0.9878 - val_loss 0.0281 - val_accuracy 0.9922
+Epoch 1320
+9595 [==============================] - 94s 986msstep - loss 0.0405 - accuracy 0.9881 - val_loss 0.0286 - val_accuracy 0.9935
+Epoch 1420
+9595 [==============================] - 93s 979msstep - loss 0.0366 - accuracy 0.9878 - val_loss 0.0290 - val_accuracy 0.9922
+Epoch 1520
+9595 [==============================] - 93s 975msstep - loss 0.0290 - accuracy 0.9931 - val_loss 0.0306 - val_accuracy 0.9909
+Epoch 1620
+9595 [==============================] - 93s 981msstep - loss 0.0337 - accuracy 0.9918 - val_loss 0.0276 - val_accuracy 0.9935
+Epoch 1720
+9595 [==============================] - 93s 980msstep - loss 0.0330 - accuracy 0.9911 - val_loss 0.0283 - val_accuracy 0.9935
+Epoch 1820
+9595 [==============================] - 93s 977msstep - loss 0.0344 - accuracy 0.9862 - val_loss 0.0281 - val_accuracy 0.9922
+Epoch 1920
+9595 [==============================] - 94s 991msstep - loss 0.0254 - accuracy 0.9931 - val_loss 0.0283 - val_accuracy 0.9922
+Epoch 2020
+9595 [==============================] - 94s 983msstep - loss 0.0298 - accuracy 0.9927 - val_loss 0.0283 - val_accuracy 0.9922
+[INFO] evaluating network...
+2424 [==============================] - 15s 594msstep
+              precision    recall  f1-score   support
+
+   with_mask       0.99      0.99      0.99       383
+without_mask       0.99      0.99      0.99       384
+
+    accuracy                           0.99       767
+   macro avg       0.99      0.99      0.99       767
+weighted avg       0.99      0.99      0.99       767
+
+[INFO] saving mask detector model...

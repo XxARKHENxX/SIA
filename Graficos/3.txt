@@ -1,0 +1,75 @@
+PS C:\Users\User\Desktop\Faculdade\SI\SIA> & C:/Users/User/AppData/Local/Programs/Python/Python310/python.exe c:/Users/User/Desktop/Faculdade/SI/SIA/Algoritmo/train_mask_detector.py
+2022-06-25 13:28:14.325377: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2022-06-25 13:28:14.325675: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+[INFO] carregando imagens...
+C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\PIL\Image.py:992: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in [96, 128, 160, 192, 224]. Weights for input shape (224, 224) will be loaded as the default.
+2022-06-25 13:28:32.152344: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2022-06-25 13:28:32.153384: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cublas64_11.dll'; dlerror: cublas64_11.dll not found
+2022-06-25 13:28:32.154258: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cublasLt64_11.dll'; dlerror: cublasLt64_11.dll not found
+2022-06-25 13:28:32.155230: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cufft64_10.dll'; dlerror: cufft64_10.dll not found
+2022-06-25 13:28:32.156102: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'curand64_10.dll'; dlerror: curand64_10.dll not found
+2022-06-25 13:28:32.157042: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cusolver64_11.dll'; dlerror: cusolver64_11.dll not found
+2022-06-25 13:28:32.157922: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cusparse64_11.dll'; dlerror: cusparse64_11.dll not found
+2022-06-25 13:28:32.158817: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudnn64_8.dll'; dlerror: cudnn64_8.dll not found
+2022-06-25 13:28:32.158956: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2022-06-25 13:28:32.159369: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[INFO] compilando modelo...
+C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\optimizers\optimizer_v2\adam.py:110: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super(Adam, self).__init__(name, **kwargs)
+[INFO] cabeça de treinamento...
+Epoch 1/20
+95/95 [==============================] - 96s 982ms/step - loss: 0.4083 - accuracy: 0.8500 - val_loss: 0.1604 - val_accuracy: 0.9844
+Epoch 2/20
+95/95 [==============================] - 108s 1s/step - loss: 0.1585 - accuracy: 0.9604 - val_loss: 0.0802 - val_accuracy: 0.9896
+Epoch 3/20
+95/95 [==============================] - 107s 1s/step - loss: 0.1022 - accuracy: 0.9730 - val_loss: 0.0557 - val_accuracy: 0.9922
+Epoch 4/20
+95/95 [==============================] - 101s 1s/step - loss: 0.0722 - accuracy: 0.9829 - val_loss: 0.0456 - val_accuracy: 0.9922
+Epoch 5/20
+95/95 [==============================] - 100s 1s/step - loss: 0.0666 - accuracy: 0.9822 - val_loss: 0.0402 - val_accuracy: 0.9922
+Epoch 6/20
+95/95 [==============================] - 100s 1s/step - loss: 0.0533 - accuracy: 0.9875 - val_loss: 0.0374 - val_accuracy: 0.9909
+Epoch 7/20
+95/95 [==============================] - 100s 1s/step - loss: 0.0494 - accuracy: 0.9871 - val_loss: 0.0377 - val_accuracy: 0.9909
+Epoch 8/20
+95/95 [==============================] - 99s 1s/step - loss: 0.0532 - accuracy: 0.9858 - val_loss: 0.0343 - val_accuracy: 0.9909
+Epoch 9/20
+95/95 [==============================] - 100s 1s/step - loss: 0.0388 - accuracy: 0.9868 - val_loss: 0.0332 - val_accuracy: 0.9909
+Epoch 10/20
+95/95 [==============================] - 100s 1s/step - loss: 0.0367 - accuracy: 0.9901 - val_loss: 0.0317 - val_accuracy: 0.9922
+Epoch 11/20
+95/95 [==============================] - 100s 1s/step - loss: 0.0398 - accuracy: 0.9848 - val_loss: 0.0343 - val_accuracy: 0.9909
+Epoch 12/20
+95/95 [==============================] - 96s 1s/step - loss: 0.0394 - accuracy: 0.9868 - val_loss: 0.0289 - val_accuracy: 0.9935
+Epoch 13/20
+95/95 [==============================] - 103s 1s/step - loss: 0.0303 - accuracy: 0.9911 - val_loss: 0.0393 - val_accuracy: 0.9857
+Epoch 14/20
+95/95 [==============================] - 103s 1s/step - loss: 0.0339 - accuracy: 0.9904 - val_loss: 0.0287 - val_accuracy: 0.9935
+Epoch 15/20
+95/95 [==============================] - 101s 1s/step - loss: 0.0288 - accuracy: 0.9927 - val_loss: 0.0254 - val_accuracy: 0.9922
+Epoch 16/20
+95/95 [==============================] - 104s 1s/step - loss: 0.0312 - accuracy: 0.9901 - val_loss: 0.0279 - val_accuracy: 0.9922
+Epoch 17/20
+95/95 [==============================] - 108s 1s/step - loss: 0.0290 - accuracy: 0.9904 - val_loss: 0.0269 - val_accuracy: 0.9935
+Epoch 18/20
+95/95 [==============================] - 113s 1s/step - loss: 0.0304 - accuracy: 0.9924 - val_loss: 0.0279 - val_accuracy: 0.9922
+Epoch 19/20
+95/95 [==============================] - 101s 1s/step - loss: 0.0266 - accuracy: 0.9921 - val_loss: 0.0279 - val_accuracy: 0.9922
+Epoch 20/20
+95/95 [==============================] - 104s 1s/step - loss: 0.0271 - accuracy: 0.9911 - val_loss: 0.0244 - val_accuracy: 0.9922
+[INFO] avaliando rede...
+24/24 [==============================] - 17s 662ms/step
+              precision    recall  f1-score   support
+
+   with_mask       0.99      0.99      0.99       383
+without_mask       0.99      0.99      0.99       384
+
+    accuracy                           0.99       767
+   macro avg       0.99      0.99      0.99       767
+weighted avg       0.99      0.99      0.99       767
+
+[INFO] saving mask detector model...
