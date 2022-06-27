@@ -103,8 +103,8 @@ while True:
 
 		# determine o rótulo e a cor da classe que usaremos para desenhar
 		# a caixa delimitadora e o texto
-		label = "Mask" if mask > withoutMask else "No Mask"
-		color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
+		label = "Mask teste" if mask > withoutMask else "No Mask teste"
+		color = (0, 255, 0) if label == "Mask teste" else (0, 0, 255)
 
 		# inclua a probabilidade no rótulo
 		label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
