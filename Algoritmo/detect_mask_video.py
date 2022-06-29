@@ -103,7 +103,9 @@ while True:
 
 		# determine o rótulo e a cor da classe que usaremos para desenhar
 		# a caixa delimitadora e o texto
-		label = "Mask teste" if mask > withoutMask else "No Mask teste"
+		count = 1
+		label = "Mask teste" if mask > withoutMask else "No Mask teste" and cv2.imwrite("C:\SIA\Algoritmo\print/teste%d.jpg" % count, frame)
+		count += 1
 		color = (0, 255, 0) if label == "Mask teste" else (0, 0, 255)
 
 		# inclua a probabilidade no rótulo

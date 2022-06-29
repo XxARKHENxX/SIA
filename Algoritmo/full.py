@@ -8,9 +8,12 @@ import imutils
 import time
 import cv2
 import os
+import os.path
+import winsound
 
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
+
     # pegue as dimensões do quadro e construa um blob
     # a partir dele
     (h, w) = frame.shape[:2]
@@ -82,11 +85,13 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 maskNet = load_model("mask_detector.model")
 
 # inicializar o fluxo de vídeo
-print("[INFO] Iniciando o algoritmo...")
+print("[INFO] starting video stream...")
 vs = VideoStream(src=0).start()
 
 # loop sobre os quadros do fluxo de vídeo
+contador = 0
 while True:
+
     # pegue o quadro do fluxo de vídeo encadeado e redimensione-o
     # ter uma largura máxima de 400 pixels
     frame = vs.read()
@@ -98,6 +103,7 @@ while True:
 
     # loop sobre os locais de rosto detectados e seus correspondentes
     # locations
+
     for (box, pred) in zip(locs, preds):
         # descompacte a caixa delimitadora e as previsões
         (startX, startY, endX, endY) = box
@@ -105,18 +111,29 @@ while True:
 
         # determine o rótulo e a cor da classe que usaremos para desenhar
         # a caixa delimitadora e o texto
+        duration = 150  # milliseconds
+    freq = 440  # Hz
+    label = "Com mascara" if mask > withoutMask else "Sem mascara" and winsound.Beep(
+        freq, duration)
+    color = (0, 255, 0) if label == "Com mascara" else (0, 0, 255)
 
-        label = "Com mascara" if mask > withoutMask else "Sem mascara" and os.system("sirene.mp3")
-        color = (0, 255, 0) if label == "Com mascara" else (0, 0, 255)
+    label = "Mask teste" if mask > withoutMask else "No Mask teste" and cv2.imwrite(
+        "C:\SIA\Algoritmo\print/teste%d.jpg" % contador, frame)
+    print("contagem :", contador)
+    contador = contador+1
 
-        # inclua a probabilidade no rótulo
-        label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
+    # determine o rótulo e a cor da classe que usaremos para desenhar
+    # a caixa delimitadora e o textos
+    color = (0, 255, 0) if label == "Mask teste" else (0, 0, 255)
 
-        # exibir o rótulo e o retângulo da caixa delimitadora na saída
-        # frame
-        cv2.putText(frame, label, (startX, startY - 10),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
-        cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
+    # inclua a probabilidade no rótulo
+    label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
+
+    # exibir o rótulo e o retângulo da caixa delimitadora na saída
+    # frame
+    cv2.putText(frame, label, (startX, startY - 10),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
+    cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
     # mostrar o quadro de saída
     cv2.imshow("Frame", frame)
